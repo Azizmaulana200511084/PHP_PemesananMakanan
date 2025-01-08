@@ -1,0 +1,253 @@
+html,
+body {
+    width: 100%;
+    min-height: auto;
+    font-size: 25px;
+    font-family: 'kausuhan';
+    background-image: url("/aziz-maulana/gambar/wp2757880-wallpaper-gif.gif");
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+
+#aziz-menu {
+    display: none;
+}
+
+label[for="aziz-menu"] {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(148, 0, 0);
+    border-radius: 15px;
+    border: 2px groove rgb(255, 255, 0);
+}
+
+.aziz-menu {
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    transform: translate(-110%);
+    z-index: 998;
+    background-color: rgb(148, 0, 0);
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    border-right: 2px groove rgb(255, 255, 0);
+}
+
+.aziz-menu>ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    padding: 20px;
+    height: 1%;
+}
+
+.aziz-menu>ul>li {
+    font-size: 13px;
+    white-space: nowrap;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    color: rgb(148, 0, 0);
+}
+
+#aziz-menu:checked+label {
+    background-color: transparent;
+    border-color: rgb(255, 255, 0);
+}
+
+#aziz-menu:checked~div.aziz-menu {
+    transform: translate(0px);
+    visibility: visible;
+}
+
+.link-menusamping {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 997;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: 500ms;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#aziz-menu:checked~div.link-menusamping {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+[for="aziz-menu"]>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.daftar-menu {
+    display: block;
+    width: 17px;
+    height: 2px;
+    margin: 10px 0 5px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background-color: rgb(255, 255, 0);
+    transition: 500ms;
+    transform-origin: right center;
+}
+
+[for="aziz-menu"]>div>span:nth-child(4),
+[for="aziz-menu"]>div>span:nth-child(5),
+[for="aziz-menu"]>div>span:nth-child(6) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transform-origin: left center;
+}
+
+#aziz-menu:checked+label span {
+    background-color: rgb(255, 255, 0);
+}
+
+#aziz-menu:checked+label span:nth-child(2),
+#aziz-menu:checked+label span:nth-child(5) {
+    transform: scale(0);
+}
+
+#aziz-menu:checked+label span:nth-child(1) {
+    transform: translateY(17px) rotate(45deg);
+}
+
+#aziz-menu:checked+label span:nth-child(4) {
+    transform: translateY(17px) rotate(-45deg);
+}
+
+#aziz-menu:checked+label span:nth-child(3) {
+    transform: translateY(-17px) rotate(-45deg);
+}
+
+#aziz-menu:checked+label span:nth-child(6) {
+    transform: translateY(-17px) rotate(45deg);
+}
+
+a {
+    font-size: 18px;
+    font-family: 'kausuhan';
+    display: inline;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 2px;
+    color: white;
+}
+
+.azizlogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+}
+
+.dashboard {
+    text-align: center;
+    color: white;
+    font-style: italic;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    text-align: center;
+    background: linear-gradient(to right, #ffffff 20%, #ff0000 40%, #eff300 60%, #ffffff 80%);
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animasiTulisan 3s linear infinite;
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 400px) and (max-width: 1300px) {
+    .dashboard {
+        width: auto;
+        font-size: 18px;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-left: 1%;
+        padding-right: 1%;
+        scroll-behavior: smooth;
+    }
+    a {
+        width: auto;
+        font-size: auto;
+    }
+    .azizlogo {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .dashboard {
+        width: auto;
+        font-size: 18px;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-left: 1%;
+        padding-right: 1%;
+        scroll-behavior: smooth;
+    }
+    .aziz-menu {
+        width: 60%;
+        font-size: auto;
+    }
+    .azizlogo {
+        width: 30%;
+    }
+    a {
+        font-size: auto;
+    }
+}
+
+@keyframes animasiTulisan {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@font-face {
+    font-family: "autum";
+    src: url('/aziz-maulana/font/autum.otf');
+}
+
+@font-face {
+    font-family: "kausuhan";
+    src: url('/aziz-maulana/font/kausuhan.otf');
+}
+
+@font-face {
+    font-family: "selena";
+    src: url('/aziz-maulana/font/Selena.ttf');
+}
